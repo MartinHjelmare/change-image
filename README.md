@@ -1,4 +1,4 @@
 change-image
 ============
 
-bash script to change meta data in a ome-tif image
+bash script to change meta data in an ome-tif image
