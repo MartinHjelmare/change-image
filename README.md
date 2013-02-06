@@ -9,7 +9,7 @@ libtiff-tools
 imagemagick
 
 Install prerequisites on Ubuntu:
-
+```
 sudo apt-get install libtiff-tools imagemagick
-
+```
 Copy "settings.blank.cfg" to "settings.cfg" and change paths inside "settings.cfg" to your liking
