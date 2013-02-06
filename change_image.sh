@@ -10,8 +10,6 @@ source settings.cfg
 image=$1
 xCoord=$2
 yCoord=$3
-s=$(<settings.cfg)
-set -- $s
 tiffinfo $image | cat > $BEFORE
 tiffinfo $image | \
 sed -e 's/  ImageDescription: //' -e '1,/  Planar Configuration:/d' -e "s/PositionX=\".*\" PositionY=\".*\" /PositionX=\"$xCoord\" PositionY=\"$yCoord\" /" | \
