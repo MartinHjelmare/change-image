@@ -9,5 +9,6 @@ libtiff-tools
 imagemagick
 
 Install prerequisites on Ubuntu:
-
+```
 sudo apt-get install libtiff-tools imagemagick
+```
