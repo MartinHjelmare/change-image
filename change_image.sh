@@ -9,8 +9,10 @@ fi
 image=$1
 xCoord=$2
 yCoord=$3
-tiffinfo $image | cat >/home/martin/Skrivbord/chcoord/before.txt
+s=$(<settings.cfg)
+set -- $s
+tiffinfo $image | cat > $1
 tiffinfo $image | \
 sed -e 's/  ImageDescription: //' -e '1,/  Planar Configuration:/d' -e "s/PositionX=\".*\" PositionY=\".*\" /PositionX=\"$xCoord\" PositionY=\"$yCoord\" /" | \
-cat >/home/martin/Skrivbord/chcoord/after.txt
+cat > $2
 convert -depth 16 -comment "@/home/martin/Skrivbord/chcoord/after.txt" $image $image".new"
