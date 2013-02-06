@@ -6,13 +6,14 @@ then
 echo "Syntax: $(basename $0) image x-coordinate y-coordinate"
 exit 1
 fi
+source settings.cfg
 image=$1
 xCoord=$2
 yCoord=$3
 s=$(<settings.cfg)
 set -- $s
-tiffinfo $image | cat > $1
+tiffinfo $image | cat > $BEFORE
 tiffinfo $image | \
 sed -e 's/  ImageDescription: //' -e '1,/  Planar Configuration:/d' -e "s/PositionX=\".*\" PositionY=\".*\" /PositionX=\"$xCoord\" PositionY=\"$yCoord\" /" | \
-cat > $2
-convert -depth 16 -comment "@/home/martin/Skrivbord/chcoord/after.txt" $image $image".new"
+cat > $AFTER
+convert -depth 16 -comment "@$AFTER" $image $image".new"
