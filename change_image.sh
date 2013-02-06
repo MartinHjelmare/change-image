@@ -1,5 +1,5 @@
 #!/bin/bash
-#This script checks the meta data inside a tif image and does some manipulation, then saves as a new tif. More specifically it changes the xy position coordinates of the image.
+#This script checks the meta data inside a tif image and does some manipulation, then saves as a new tif. More specifically it changes the xy position coordinates of the image using arguments.
 #Not done yet, need to incoorporate the coordinates by selecting well, through IF-statement. And rather use XSLT instead of sed.
 if [ $# -eq 0 ];
 then
