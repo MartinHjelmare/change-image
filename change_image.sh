@@ -10,8 +10,8 @@ fi
 image=$1
 xCoord=$2
 yCoord=$3
-sh /home/martin/Skrivbord/bftools/tiffcomment $image | cat > $BEFORE
-sh /home/martin/Skrivbord/bftools/tiffcomment $image | \
+sh $BFTOOLS"tiffcomment" $image | cat > $BEFORE
+sh $BFTOOLS"tiffcomment" $image | \
 sed -e "s/PositionX=\".*\" PositionY=\".*\" /PositionX=\"$xCoord\" PositionY=\"$yCoord\" /" | \
 cat > $AFTER
-sh /home/martin/Skrivbord/bftools/tiffcomment -set "$AFTER" $image
+sh $BFTOOLS"tiffcomment" -set "$AFTER" $image
