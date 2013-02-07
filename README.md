@@ -5,11 +5,6 @@ bash script to change meta data in an ome-tif image
 
 Requires:
 
-libtiff-tools
-imagemagick
+Bioformats command line tools (http://www.openmicroscopy.org/site/support/bio-formats/users/comlinetools/index.html)
 
-Install prerequisites on Ubuntu:
-```
-sudo apt-get install libtiff-tools imagemagick
-```
 Copy "settings.blank.cfg" to "settings.cfg" and change paths inside "settings.cfg" to your liking
