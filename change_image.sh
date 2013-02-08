@@ -11,6 +11,7 @@ fi
 image=$1
 xCoord=$2
 yCoord=$3
+#Remember that plates are reversed.
 #xRow=$(expr $2 / 8 + 1)
 #yRow=$(expr $2 % 8)
 #xCoord=$(echo "scale= 3; ( 4 + $xRow * 9 ) / 1000" | bc)
