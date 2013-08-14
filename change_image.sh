@@ -1,6 +1,6 @@
 #!/bin/bash
-#Change the path to "settings.cfg" to the correct one before running script!
-. "/home/martin/change-image/settings.cfg"
+#Change the path to "settings.cfg" if you execute the script from outside the script directory, before running script!
+. "./settings.cfg"
 #This script checks the meta data inside a tif image and does some manipulation, then injects the meta data inside an existing ome.tif image. More specifically it changes the xy position coordinates of the image using arguments.
 #Not done yet, need to incoorporate the coordinates by selecting well, through IF-statement. And rather use XSLT instead of sed.
 if [ $# -eq 0 ];
